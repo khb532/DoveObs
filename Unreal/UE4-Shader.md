@@ -71,7 +71,7 @@ Depth Prepass란, 픽셀마다 화면에 보이는 물체를 선별하는 작업
 
 하지만 여전히 비효율성이 남아있습니다. Depth Prepass와 Base Pass에서 모두 오브젝트를 참조하기 때문입니다. 즉 Depth Map을 그리면서 Vertex를 다 찾아다녔는데 또 찾아야 한다는 말입니다.
 
-이를 극복하기 위해 Unreal Engine 5에서는 Nanite 전용으로 Deferred Material Rendering 방식을 사용합니다. 자세한 이야기는 다음 글에서 하겠습니다.
+이를 극복하기 위해 Unreal Engine 5에서는 [[Nanite|Nanite]] 전용으로 [[Nanite#2. Deferred Material Rendering|Deferred Material Rendering]] 방식을 사용합니다. 자세한 이야기는 다음 글에서 하겠습니다.
 
 
 ---
@@ -87,4 +87,4 @@ Depth Prepass란, 픽셀마다 화면에 보이는 물체를 선별하는 작업
 
 제목에는 Shader가 들어가지만 정작 Shader는 제가 몰라서 딱히 내용 없습니다..
 
-다음 글에서는 Unreal 5에서 도입한 Nanite, Lumen, Virtual Shadow Map, Mega Lights를 알아보겠습니다.
+다음 글에서는 Unreal 5에서 도입한 [[Nanite|Nanite]], [[Nanite#8. Lumen|Lumen]], [[Nanite#7. Virtual Shadow Map|Virtual Shadow Map]], Mega Lights를 알아보겠습니다.
