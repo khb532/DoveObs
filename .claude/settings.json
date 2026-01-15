@@ -1,0 +1,30 @@
+{
+  "hooks": {},
+  "includeCoAuthoredBy": false,
+  "permissions":
+  {
+    "allow":
+    [
+      "Read(**/**)",
+      "Glob(**/*)",
+      "Grep(**/*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git log:*)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(echo:*)",
+      "Bash(pwd)",
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(type:*)",
+      "Bash(npx:*)",
+      "Bash(find:*)",
+      "Bash(read:*)"
+    ]
+  }
+}

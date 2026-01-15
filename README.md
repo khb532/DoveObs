@@ -34,6 +34,3 @@ D:\Obsidian\
 2. Obsidian에서 각 폴더를 볼트로 열기
 3. 볼트 간 크로스 링크를 통해 연결된 지식 탐색
 
----
-
-*Powered by Obsidian*
