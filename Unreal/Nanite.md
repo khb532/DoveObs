@@ -8,12 +8,12 @@
 
 ## 1. Deferred Shader Rendering
 
-저번 글에서 다룬 Deferred Shader Rendering은 Shader(Lighting)연산을 쪼개주면서 효율적 이득을 챙겼습니다. 즉, 화면에 보이는 물체의 표면만 재구성하여 G-Buffer를 만들고, G-Buffer에서 Shader 연산을 했습니다. 따라서 물체 개수에 비례하는 Shader 연산을 하지 않고, 화면의 픽셀에 비례하는 Shader 연산을 했습니다.
+저번 글에서 다룬 [[UE4-Shader#1. Deferred Shader Rendering|Deferred Shader Rendering]]은 Shader(Lighting)연산을 쪼개주면서 효율적 이득을 챙겼습니다. 즉, 화면에 보이는 물체의 표면만 재구성하여 G-Buffer를 만들고, G-Buffer에서 Shader 연산을 했습니다. 따라서 물체 개수에 비례하는 Shader 연산을 하지 않고, 화면의 픽셀에 비례하는 Shader 연산을 했습니다.
 
 추가적으로 G-Buffer를 만드는 과정을 Depth PrePass와 Base Pass로 나누어, 표면이 겹치는 경우를 처리했습니다.
 
-- **Depth PrePass**: 물체의 Vertex 정보만 써서 픽셀마다 제일 가까운 표면까지 거리를 표기해 Depth Map을 만듦
-- **Base Pass**: Depth Map으로 화면 픽셀마다 어떤 물체가 제일 앞에 나와있는지 판단하여 G-Buffer 구성
+- **[[UE4-Shader#2.2 Depth Pre-Pass|Depth PrePass]]**: 물체의 Vertex 정보만 써서 픽셀마다 제일 가까운 표면까지 거리를 표기해 Depth Map을 만듦
+- **[[UE4-Shader#2.3 Base Pass|Base Pass]]**: Depth Map으로 화면 픽셀마다 어떤 물체가 제일 앞에 나와있는지 판단하여 G-Buffer 구성
 
 하지만 문제점은 물체의 vertex가 중복으로 호출된다는 점입니다. 따라서 Unreal Engine 5에서는 새로운 파이프라인을 도입하게 됩니다.
 
