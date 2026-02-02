@@ -1,0 +1,215 @@
+/* @settings
+
+name: Obsidianite Customization
+id: obsidianite-custom
+settings:
+    -
+        id: callout-colors
+        title: Callout Colors
+        type: heading
+        level: 2
+    -
+        id: callout-note-color
+        title: Note Callout Color
+        description: Change the color of [!note] callouts
+        type: variable-color
+        format: rgb
+        default: '#5b9cf6'
+    -
+        id: callout-info-color
+        title: Info Callout Color
+        description: Change the color of [!info] callouts
+        type: variable-color
+        format: rgb
+        default: '#3b82f6'
+    -
+        id: callout-tip-color
+        title: Tip Callout Color
+        description: Change the color of [!tip] callouts
+        type: variable-color
+        format: rgb
+        default: '#2ea067'
+    -
+        id: callout-success-color
+        title: Success Callout Color
+        description: Change the color of [!success] callouts
+        type: variable-color
+        format: rgb
+        default: '#10b981'
+    -
+        id: callout-question-color
+        title: Question Callout Color
+        description: Change the color of [!question] callouts
+        type: variable-color
+        format: rgb
+        default: '#f59e0b'
+    -
+        id: callout-warning-color
+        title: Warning Callout Color
+        description: Change the color of [!warning] callouts
+        type: variable-color
+        format: rgb
+        default: '#d97706'
+    -
+        id: callout-failure-color
+        title: Failure Callout Color
+        description: Change the color of [!failure] callouts
+        type: variable-color
+        format: rgb
+        default: '#dc2626'
+    -
+        id: callout-danger-color
+        title: Danger Callout Color
+        description: Change the color of [!danger] callouts
+        type: variable-color
+        format: rgb
+        default: '#ef4444'
+    -
+        id: callout-bug-color
+        title: Bug Callout Color
+        description: Change the color of [!bug] callouts
+        type: variable-color
+        format: rgb
+        default: '#dc2626'
+    -
+        id: callout-example-color
+        title: Example Callout Color
+        description: Change the color of [!example] callouts
+        type: variable-color
+        format: rgb
+        default: '#9333ea'
+    -
+        id: callout-quote-color
+        title: Quote Callout Color
+        description: Change the color of [!quote] callouts
+        type: variable-color
+        format: rgb
+        default: '#9ca3af'
+
+*/
+
+/* Callout Color Variables */
+body {
+    --callout-note-rgb: var(--callout-note-color);
+    --callout-info-rgb: var(--callout-info-color);
+    --callout-tip-rgb: var(--callout-tip-color);
+    --callout-success-rgb: var(--callout-success-color);
+    --callout-question-rgb: var(--callout-question-color);
+    --callout-warning-rgb: var(--callout-warning-color);
+    --callout-failure-rgb: var(--callout-failure-color);
+    --callout-danger-rgb: var(--callout-danger-color);
+    --callout-bug-rgb: var(--callout-bug-color);
+    --callout-example-rgb: var(--callout-example-color);
+    --callout-quote-rgb: var(--callout-quote-color);
+}
+
+/* Apply Colors to Callouts */
+.callout[data-callout="note"] {
+    --callout-color: var(--callout-note-rgb);
+}
+
+.callout[data-callout="info"] {
+    --callout-color: var(--callout-info-rgb);
+}
+
+.callout[data-callout="tip"] {
+    --callout-color: var(--callout-tip-rgb);
+}
+
+.callout[data-callout="success"] {
+    --callout-color: var(--callout-success-rgb);
+}
+
+.callout[data-callout="question"] {
+    --callout-color: var(--callout-question-rgb);
+}
+
+.callout[data-callout="warning"] {
+    --callout-color: var(--callout-warning-rgb);
+}
+
+.callout[data-callout="failure"] {
+    --callout-color: var(--callout-failure-rgb);
+}
+
+.callout[data-callout="danger"] {
+    --callout-color: var(--callout-danger-rgb);
+}
+
+.callout[data-callout="bug"] {
+    --callout-color: var(--callout-bug-rgb);
+}
+
+.callout[data-callout="example"] {
+    --callout-color: var(--callout-example-rgb);
+}
+
+.callout[data-callout="quote"] {
+    --callout-color: var(--callout-quote-rgb);
+}
+
+/* 수평선(hr) 중앙 심볼 제거 */
+.cm-line hr::after,
+.markdown-preview-view hr::after {
+    content: none !important;
+}
+
+/* Callout 안의 코드 블록에도 언어 레이블 표시 - Obsidianite 스타일 그대로 */
+.callout pre[class*='language-']:before {
+  font-family: Rubik, Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.6rem;
+  color: #fff;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  padding: 0;
+  color: var(--text-accent) !important;
+  content: '';
+  text-transform: uppercase;
+  background: rgba(16, 14, 23, 0.86);
+  border-radius: 8px;
+  padding: 0.1em 0.8em;
+  z-index: 10;
+}
+
+.callout pre {
+    position: relative;
+}
+
+/* 모든 언어 자동 표시 */
+pre[class*='language-']:before,
+.callout pre[class*='language-']:before {
+  content: attr(class) !important;
+}
+
+/* 주요 언어들 개별 설정 */
+pre[class$='c']:before,
+.callout pre[class$='c']:before {
+  content: 'C' !important;
+}
+
+pre[class$='cpp']:before,
+pre[class$='c++']:before,
+.callout pre[class$='cpp']:before,
+.callout pre[class$='c++']:before {
+  content: 'C++' !important;
+}
+
+pre[class$='python']:before,
+.callout pre[class$='python']:before {
+  content: 'Python' !important;
+}
+
+pre[class$='java']:before,
+.callout pre[class$='java']:before {
+  content: 'Java' !important;
+}
+
+pre[class$='javascript']:before,
+pre[class$='js']:before,
+.callout pre[class$='javascript']:before,
+.callout pre[class$='js']:before {
+  content: 'JavaScript' !important;
+}

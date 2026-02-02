@@ -1,0 +1,14 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 15,
+  "enabledCssSnippets": [
+    "heading-sizes",
+    "typography",
+    "minimal-custom"
+  ],
+  "textFontFamily": "Noto Sans KR,Pretendard",
+  "accentColor": "",
+  "monospaceFontFamily": "Consolas,Noto Sans KR",
+  "interfaceFontFamily": "Noto Sans KR"
+}

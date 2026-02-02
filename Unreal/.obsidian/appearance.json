@@ -1,0 +1,11 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "callout-red"
+  ],
+  "monospaceFontFamily": "Consolas",
+  "textFontFamily": "Pretendard",
+  "interfaceFontFamily": "Noto Sans KR"
+}

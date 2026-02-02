@@ -1,0 +1,19 @@
+/* Callout note 타입을 빨간색으로 변경 */
+.callout[data-callout="note"] {
+    --callout-color: 255, 0, 0;
+    --callout-icon: lucide-sticky-note;
+}
+
+/* 더 어두운 빨간색 (선호할 경우) */
+/*
+.callout[data-callout="note"] {
+    --callout-color: 220, 38, 38;
+}
+*/
+
+/* 더 밝은 빨간색/핑크 (선호할 경우) */
+/*
+.callout[data-callout="note"] {
+    --callout-color: 255, 82, 82;
+}
+*/

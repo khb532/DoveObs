@@ -1,0 +1,4 @@
+{
+  "minimal-style@@callouts-style": "callouts-outlined",
+  "minimal-style@@callout-blend-mode": "var(--highlight-mix-blend-mode)"
+}

@@ -1,0 +1,8 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "callout-red"
+  ]
+}

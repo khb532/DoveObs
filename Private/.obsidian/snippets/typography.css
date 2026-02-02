@@ -1,0 +1,6 @@
+/* 타이포그래피 설정 - 자간 및 공백 간격 */
+.markdown-preview-view,
+.markdown-source-view {
+    letter-spacing: 0.01em;  /* 자간 */
+    word-spacing: 0.1em;     /* 공백 간격 */
+}

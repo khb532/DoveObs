@@ -1,0 +1,63 @@
+/* 헤딩 폰트 크기 - 노션 스타일 (기본 15px 기준) */
+body {
+    --h1-size: 2.0em;
+    --h2-size: 1.6em;
+    --h3-size: 1.33em;
+    --h4-size: 1.13em;
+    --heading-spacing: 20em;
+}
+
+/* H1 - 위아래 파란 라인 + 여백 */
+.markdown-preview-view h1,
+.HyperMD-header-1 .cm-header-1 {
+    border-top: 1px solid #3b82f6 !important;
+    border-bottom: 3px solid #3b82f6 !important;
+    padding: 0.2em 0 !important;
+}
+
+/* H2 - box-shadow 스타일 */
+.markdown-preview-view h2,
+.HyperMD-header-2 .cm-header-2 {
+    background: #0257a275 !important;
+    padding: 2px 15px !important;
+    border-radius: 5px 5px 5px 5px !important;
+}
+
+/* H3 - 좌측 포인트 바 스타일 */
+.markdown-preview-view h3,
+.HyperMD-header-3 .cm-header-3 {
+    padding: 0em 0.4em !important;
+    border-left: 5px solid #0257a2 !important;
+    border-bottom: 1px solid #e5e5e580 !important;
+}
+
+/* 인라인 코드 - 노션 스타일 */
+.markdown-preview-view code:not(pre code),
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+    background-color: rgba(135, 131, 120, 0.15) !important;
+    color: #eb5757 !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
+    font-size: 0.9em !important;
+}
+
+/* 순서없는 리스트 불릿 스타일 - 기본 */
+.list-bullet:after {
+    background-color: transparent !important;
+    content: "●" !important;
+    color: var(--list-marker-color) !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    font-size: 0.5em !important;
+}
+
+/* 2단계 - cm-list-2를 포함하는 라인 */
+.HyperMD-list-line-2 .list-bullet:after {
+    content: "○" !important;
+}
+
+/* 3단계 */
+.HyperMD-list-line-3 .list-bullet:after {
+    content: "■" !important;
+}
