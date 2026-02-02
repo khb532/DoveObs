@@ -16,5 +16,8 @@ desktop.ini
 # Trash
 **/.trash/
 
+# Google Drive temp files
+**/.tmp.drivedownload/
+
 3DCG_Channel/
 Private/Censored/
